@@ -59,6 +59,12 @@
 
 <script>
 
+  const audioArr = document.getElementsByTagName('audio');
+
+  window.addEventListener('keydown', function(e) {
+    Array.from(audioArr).find(a => parseInt(a.dataset.key) === e.which).play()
+  })
+
 </script>
 
 
